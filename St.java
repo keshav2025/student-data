@@ -16,14 +16,14 @@ class NegativeMarksException extends Exception {
     }
 }
 
-// Custom exception class for handling invalid roll numbers
+
 class InvalidRollNumberException extends Exception {
     public InvalidRollNumberException(String message) {
         super(message);
     }
 }
 
-// Student class definition
+
 class Student {
     private String name;
     private int rollNumber;
@@ -37,7 +37,7 @@ class Student {
         this.marks = marks;
     }
 
-    // Getters
+    
     public String getName() {
         return name;
     }
@@ -59,7 +59,7 @@ class Student {
 class StudentDatabase {
     private ArrayList<Student> students = new ArrayList<>();
 
-    // Add students to the database
+    
     public void addStudent(Student student) throws InvalidRollNumberException {
         for (Student s : students) {
             if (s.getRollNumber() == student.getRollNumber()) {
@@ -70,7 +70,7 @@ class StudentDatabase {
         System.out.println("Student added successfully!");
     }
 
-    // View all students in the database
+   
     public void viewStudents() {
         if (students.isEmpty()) {
             System.out.println("No students in the database.");
@@ -83,7 +83,7 @@ class StudentDatabase {
         }
     }
 
-    // Search for a student by roll number
+    
     public void searchStudent(int rollNumber) {
         boolean found = false;
         for (Student student : students) {
@@ -100,7 +100,7 @@ class StudentDatabase {
         }
     }
 
-    // Calculate average marks of all students in the database
+    
     public void calculateAverageMarks() {
         if (students.isEmpty()) {
             System.out.println("No students in the database.");
@@ -115,7 +115,7 @@ class StudentDatabase {
     }
 }
 
-// Main class
+
 public class St{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
